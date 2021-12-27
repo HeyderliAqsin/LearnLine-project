@@ -1,0 +1,110 @@
+@media screen and (max-width:1352px){
+#Videos{
+    .Post,.Post2{
+       .Video{
+        iframe{
+            width: 680px;
+        }
+       }
+    }
+}
+#Main{
+    .Post,.Post2,.Post3{
+        .Video{
+            iframe{
+                width: 560px;
+            }
+           }
+    }
+}
+    
+    
+}
+
+
+@media screen and (max-width:1200px){
+#header{
+    .top-head{
+        ul{
+            .first{
+                display: none;
+            }
+            .last{
+                .dropdown{
+                   display: none !important;
+                }
+            }
+        }
+    }
+}
+#Videos{
+    .Post,.Post2{
+       .Video{
+        iframe{
+            width: 580px;
+        }
+       }
+    }
+
+}
+#Main{
+    .Post,.Post2,.Post3{
+       .Video{
+           iframe{
+               width: 450px;
+           }
+          }
+       }
+   }
+}
+@media screen and (max-width:992px){
+  
+   
+    #Main{
+        .Post,.Post2,.Post3{
+            .Video{
+                iframe{
+                    width: 720px;
+                }
+               }
+        }
+    }
+    }
+@media screen and (max-width:768px){
+  
+    #Videos{
+        .Post,.Post2{
+           .Video{
+            iframe{
+                width: 420px;
+                height: 300px;
+            }
+           }
+        }
+
+    }
+    #Main{
+        .Post,.Post2,.Post3{
+            .Video{
+                iframe{
+                    width: 550px;
+                    height: 400px;
+                }
+               }
+        }
+    }
+    }
+    @media screen and (max-width:592px){
+  
+     
+        #Main{
+            .Post,.Post2,.Post3{
+                .Video{
+                    iframe{
+                        width: 500px;
+                        height: 400px;
+                    }
+                   }
+            }
+        }
+        }

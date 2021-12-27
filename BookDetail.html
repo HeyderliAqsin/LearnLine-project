@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="vendors/bootsrap css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/slick/slick-theme.css">
+    <link rel="stylesheet" href="vendors/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <!-- Header start -->
+   <header id="header">
+    <div class="top-head d-flex justify-content-between align-items-center p-2">
+        <div class="logo">
+            <img width="250px" src="photo/learn-logo.png" alt="">
+        </div>
+        <div class="searches">
+            <form action="#" method="post">
+                <input type="text" name="search" placeholder="Search...">
+                <img width="25px" src="photo/loupe.png" alt="">
+            </form>
+        </div>
+        <ul class="list-unstyled d-flex">
+            <li class="first"><img width="20px" src="photo/profile-img-1.jpg" alt=""><span>Teacher</span></li>
+            <li><span class="tooltiptext">Notifications</span><i class="fas fa-bell ico"></i></li>
+            <li><span class="tooltiptext">Add new</span><i class="fas fa-plus ico"></i></li>
+            <li class="last"><i class="fas fa-th-large ico"></i>
+                <ul class="dropdown d-flex flex-wrap list-unstyled">
+                    <li><a href="#"><i class="fas fa-user"></i>Your profile</a></li>
+                    <li><a href="#"><i class="fas fa-plus"></i>Add Post</a></li>
+                    <li><a href="#"><i class="fas fa-user-graduate"></i>Add Student</a></li>
+                    <li><a href="calendar.html" target="_blank"><i class="fas fa-calendar-alt"></i> Schedule</a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-clipboard-list"></i>Online Exam</a></li>
+                    <li><a href="#"><i class="fas fa-file-video"></i>New Course</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i></i>Setting</a></li>
+                    <li><a href="#"><i class="fas fa-user-secret"></i>Privacy</a></li>
+                    <li><a href="#"><i class="fas fa-moon"></i>Dark Mode</a></li>
+                    <li class="logOut"><a href="#"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom-head">
+        <div class="categories d-flex justify-content-center align-items-center">
+            <div class="cat-item">
+                <a href="#">
+                    <i class="fas fa-book"></i>
+                    <p>Books</p>
+                </a>
+            </div>
+            <div class="cat-item ">
+                <a href="#">
+                    <i class="fas fa-tasks"></i>
+                    <p>Tasks</p>
+                </a>
+            </div>
+            <div class="cat-item ">
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                    <p>Videos</p>
+                </a>
+            </div>
+            <div class="cat-item ">
+                <a href="#">
+                    <i class="fas fa-blog"></i>
+                    <p>Blogs</p>
+                </a>
+            </div>
+            <div class="cat-item ">
+                <a href="#">
+                    <i class="fas fa-user-friends"></i>
+                    <p>Groups</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header end -->
+    <!-- BookDetail start -->
+    <section id="BookDetail">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 mb-2">
+                    <div class="mains-left">
+                        <div class="books d-flex">
+                            <div class="left-side">
+                                <img src="photo/book3.jpg" alt="Book">
+                                <span>Trending</span>
+                            </div>
+                            <div class="right-side">
+                                <div class="text">
+                                    <div class="icons">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h2> Python Tricks 2022</h2>
+                                    <h5>Price: <span>$20</span> </h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                                        minim veniam, quis nostrud exerci tation ullamcorper</p>
+                                    <ul class="d-flex list-unstyled flex-wrap">
+                                        <li>Author: Jhon Doe</li>
+                                        <li>Publish: Aug, 05, 2019</li>
+                                        <li>Publisher: Random House</li>
+                                        <li> Pages: 1120</li>
+                                        <li> Barcode: 9780099511021 </li>
+                                    </ul>
+                                </div>
+                                <div class="sale-button">
+                                    <a class="main-btn" href="#"><i class="fas fa-book"></i> Read Now</a>
+                                    <a class="purchase" href="#"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <h4>FeedBack</h4>
+                            <div class="comment d-flex">
+                                <img class="img-fluid" src="photo/commenter-1.jpg" alt="">
+                                <div class="text">
+                                    <div class="top d-flex justify-content-between">
+                                        <h6>
+                                            Willimes Doe <span>27 December 2021</span>
+                                        </h6>
+                                        <i class="fas fa-star">4.5</i>
+                                    </div>
+                                    <p>Quis autem velum iure reprehe nderit. Lorem ipsum dolor sit amet adipiscing
+                                        egetmassa pulvinar eu aliquet <br> nibh dapibus.</p>
+                                </div>
+                            </div>
+                            <div class="comment d-flex">
+                                <img class="img-fluid" src="photo/commenter-2.jpg" alt="">
+                                <div class="text">
+                                    <div class="top d-flex justify-content-between">
+                                        <h6>
+                                            Qlark Jack <span>25 December 2021</span>
+                                        </h6>
+                                        <i class="fas fa-star">4.5</i>
+                                    </div>
+                                    <p>Quis autem velum iure reprehe nderit. Lorem ipsum dolor sit amet adipiscing
+                                        egetmassa pulvinar eu aliquet <br> nibh dapibus.</p>
+                                </div>
+                            </div>
+                            <div class="comment d-flex">
+                                <img class="img-fluid" src="photo/commenter-3.jpg" alt="">
+                                <div class="text">
+                                    <div class="top d-flex justify-content-between">
+                                        <h6>
+                                            Olivia Take <span>25 December 2027</span>
+                                        </h6>
+                                        <i class="fas fa-star">4.5</i>
+                                    </div>
+                                    <p>Quis autem velum iure reprehe nderit. Lorem ipsum dolor sit amet adipiscing
+                                        egetmassa pulvinar eu aliquet <br> nibh dapibus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form">
+                            <div class="rating-form d-flex align-items-baseline">
+                                <h5>Give Your Rating</h5>
+                                <div class="stars ps-3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="mb-3">
+                                  <input type="email" class="form-control" placeholder="Name" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                  <input type="password" class="form-control" placeholder="Email" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" placeholder="Write Message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                                <button type="submit" class="btn btn-primary Add" >Add Review</button>
+                              </form>
+                        </div>
+                    </div>
+                    <div class="mains-left2 my-4">
+                        <div class="Books">
+                            <h4>Realted Book</h4>
+                            <div class="Slider d-flex my-4">
+                                <div class="Slider-item"><img width="150px" src="photo/book1.jpg" alt=""><h6 class="py-2">HTML5 Brick-Breaker</h6></div>
+                                <div class="Slider-item"><img width="150px" src="photo/book2.jpg" alt=""><h6 class="py-2">The Aesthetic Ideology</h6></div>
+                                <div class="Slider-item"><img width="150px" src="photo/book3.jpg" alt=""><h6 class="py-2">Pyton tricks</h6></div>
+                                <div class="Slider-item"><img width="150px" src="photo/book4.jpg" alt=""><h6 class="py-2">Holy Bible</h6></div>
+                                <div class="Slider-item"><img width="150px" src="photo/book5.jpg" alt=""><h6 class="py-2">Technology Wants</h6></div>
+                                <div class="Slider-item"><img width="150px" src="photo/book9.jpg" alt=""><h6 class="py-2">Beginning CSS</h6></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-2">
+                    <div class="mains-right mb-4">
+                        <h5>Popular Books</h5>
+                        <div class="right d-flex align-items-center mb-2">
+                            <img width="80px" src="photo/book10.jpg" alt="">
+                            <div class="book-about ps-2">
+                                <h6>Vue.js Basics</h6>
+                                <a href="#">Richard Musk</a>
+                                <i class="far fa-bookmark"></i>
+                            </div>
+                        </div>
+                        <div class="right d-flex align-items-center mb-2">
+                            <img width="80px" src="photo/book9.jpg" alt="">
+                            <div class="book-about ps-2">
+                                <h6>Css3 for Bigners</h6>
+                                <a href="#">Richard Ali</a>
+                                <i class="far fa-bookmark"></i>
+                            </div>
+                        </div>
+                        <div class="right d-flex align-items-center">
+                            <img width="80px" src="photo/book5.jpg" alt="">
+                            <div class="book-about ps-2">
+                                <h6>Css3 for Bigners</h6>
+                                <a href="#">Richard Ali</a>
+                                <i class="far fa-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mains-right2">
+                        <div class="head d-flex justify-content-between align-items-center">
+                            <h5>Explor Events </h5>
+                            <span>See All</span>
+                        </div>
+                        <div class="photo">
+                            <img width="80px" src="photo/clock.png" alt="">
+                            <div class="book-about ps-2">
+                                <i class="fas fa-gift fa-2x"></i>
+                                <h6>BZ University good night event in columbia</h6>
+                            </div>
+                        </div>
+                        <div class="photo2">
+                            <img width="80px" src="photo/clock.png" alt="">
+                            <div class="book-about ps-2 ">
+                                <i class="fas fa-microphone"></i>
+                                <h6>
+                                    The 3rd International Conference 2020
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BookDetail end -->
+    <!-- Footer start -->
+    <footer id="footer">
+        <div class="bg ">
+            <img width="100%" src="photo/footer.png" alt="">
+        </div>
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <span>
+                            © Copyright All rights reserved by LearnLine 2021
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+    <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+    <script src="vendors/JQuery/jquery-3.6.0.min.js"></script>
+    <script src="vendors/slick/slick.min.js"></script>
+    <script src="vendors/bootsrap js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

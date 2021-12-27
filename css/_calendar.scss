@@ -1,0 +1,722 @@
+.codyhouse {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+
+//   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+//     margin: 0;
+//     padding: 0;
+//     border: 0;
+//     font-size: 100%;
+//     font: inherit;
+//     vertical-align: baseline;
+//   }
+  
+  
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+    display: block;
+  }
+  
+  body {
+    line-height: 1;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  blockquote, q {
+    quotes: none;
+  }
+  
+  blockquote {
+    &:before, &:after {
+      content: '';
+      content: none;
+    }
+  }
+  
+  q {
+    &:before, &:after {
+      content: '';
+      content: none;
+    }
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* style css */
+  /* -------------------------------- 
+  
+  Primary style
+  
+  -------------------------------- */
+  
+  * {
+    box-sizing: border-box;
+  
+    &::after, &::before {
+      box-sizing: border-box;
+    }
+  }
+  
+  // html {
+  //   font-size: 62.5%;
+  // }
+  
+  body {
+    font-size: 1rem;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #ffff;
+  }
+  
+  a {
+    color: #A2B9B2;
+    text-decoration: none;
+  }
+  
+  /* -------------------------------- 
+  
+  Main Components 
+  
+  -------------------------------- */
+  
+  .cd-schedule {
+    position: relative;
+    margin: 2em 0;
+    font-size: 1.2rem;
+  
+    &::before {
+      /* never visible - this is used in js to check the current MQ */
+      content: 'mobile';
+      display: none;
+    }
+  
+    .timeline {
+      display: none;
+    }
+  
+    .events {
+      position: relative;
+      z-index: 1;
+  
+      .events-group {
+        margin-bottom: 30px;
+      }
+  
+      .top-info {
+        width: 100%;
+        padding: 0 5%;
+  
+        > span {
+          display: inline-block;
+          line-height: 1.2;
+          margin-bottom: 10px;
+          font-weight: bold;
+        }
+      }
+  
+      .events-group > ul {
+        position: relative;
+        padding: 0 5%;
+  
+        /* force its children to stay on one line */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+  
+        &::after {
+          /* never visible - used to add a right padding to .events-group > ul */
+          display: inline-block;
+          content: '-';
+          width: 1px;
+          height: 100%;
+          opacity: 0;
+          color: transparent;
+        }
+      }
+  
+      .single-event {
+        /* force them to stay on one line */
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        float: left;
+        height: 150px;
+        width: 70%;
+        max-width: 300px;
+        box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+        margin-right: 20px;
+        -webkit-transition: opacity .2s, background .2s;
+        transition: opacity .2s, background .2s;
+  
+        &:last-of-type {
+          margin-right: 5%;
+        }
+  
+        a {
+          display: block;
+          height: 100%;
+          padding: .8em;
+        }
+      }
+    }
+  
+    &.loading .events .single-event {
+      opacity: 0;
+    }
+  
+    .event-name, .event-date {
+      display: block;
+      color: white;
+      font-weight: bold;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  
+    .event-name {
+      font-size: 1.5rem;
+    }
+  
+    .event-date {
+      font-size: 0.9rem;
+      opacity: .7;
+      line-height: 1.2;
+      margin-bottom: .2em;
+    }
+  
+    .single-event[data-event="event-1"], [data-event="event-1"] .header-bg {
+      background: #577F92;
+    }
+  
+    .single-event {
+      &[data-event="event-1"]:hover {
+        background: #618da1;
+      }
+  
+      &[data-event="event-2"] {
+        background: #443453;
+      }
+    }
+  
+    [data-event="event-2"] .header-bg {
+      background: #443453;
+    }
+  
+    .single-event {
+      &[data-event="event-2"]:hover {
+        background: #513e63;
+      }
+  
+      &[data-event="event-3"] {
+        background: #A2B9B2;
+      }
+    }
+  
+    [data-event="event-3"] .header-bg {
+      background: #A2B9B2;
+    }
+  
+    .single-event {
+      &[data-event="event-3"]:hover {
+        background: #b1c4be;
+      }
+  
+      &[data-event="event-4"] {
+        background: #f6b067;
+      }
+    }
+  
+    [data-event="event-4"] .header-bg {
+      background: #f6b067;
+    }
+  
+    .single-event[data-event="event-4"]:hover {
+      background: #f7bd7f;
+    }
+  
+    .event-modal {
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      visibility: hidden;
+  
+      /* Force Hardware acceleration */
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      transform: translateX(100%);
+      -webkit-transition: visibility .4s, -webkit-transform .4s;
+      transition: visibility .4s, -webkit-transform .4s;
+      transition: transform .4s, visibility .4s;
+      transition: transform .4s, visibility .4s, -webkit-transform .4s;
+      -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+      transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  
+      .header {
+        position: relative;
+        height: 70px;
+  
+        /* vertically center its content */
+        display: table;
+        width: 100%;
+  
+        .content {
+          position: relative;
+          z-index: 3;
+  
+          /* vertically center inside its parent */
+          display: table-cell;
+          vertical-align: middle;
+          padding: .6em 5%;
+        }
+      }
+  
+      .body {
+        position: relative;
+        width: 100%;
+  
+        /* 70px is the .header height */
+        height: calc(100% - 70px);
+      }
+  
+      .event-info {
+        position: relative;
+        z-index: 2;
+        line-height: 1.4;
+        height: 100%;
+        overflow: hidden;
+  
+        > div {
+          overflow: auto;
+          height: 100%;
+          padding: 1.4em 5%;
+        }
+      }
+  
+      .header-bg {
+        /* these are the morphing backgrounds - visible on desktop only */
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+  
+      .body-bg {
+        /* these are the morphing backgrounds - visible on desktop only */
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background: white;
+        -webkit-transform-origin: top left;
+        -ms-transform-origin: top left;
+        transform-origin: top left;
+      }
+  
+      .header-bg {
+        z-index: 2;
+        -webkit-transform-origin: top center;
+        -ms-transform-origin: top center;
+        transform-origin: top center;
+      }
+  
+      .close {
+        /* this is the 'X' icon */
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        background: rgba(0, 0, 0, 0.1);
+  
+        /* replace text with icon */
+        color: transparent;
+        white-space: nowrap;
+        text-indent: 100%;
+        height: 70px;
+        width: 70px;
+  
+        &::before, &::after {
+          /* these are the two lines of the 'X' icon */
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 2px;
+          height: 22px;
+          background: white;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+  
+        &::before {
+          -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        }
+  
+        &::after {
+          -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+          -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+        }
+      }
+  
+      .event-date {
+        display: none;
+      }
+  
+      &.no-transition {
+        -webkit-transition: none;
+        transition: none;
+  
+        .header-bg, .body-bg {
+          -webkit-transition: none;
+          transition: none;
+        }
+      }
+    }
+  
+    &.modal-is-open .event-modal {
+      /* .modal-is-open class is added as soon as an event is selected */
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+      visibility: visible;
+  
+      .event-info > div {
+        /* smooth scroll on iOS touch devices */
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+  
+    .cover-layer {
+      /* layer between the content and the modal window */
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: opacity .4s, visibility .4s;
+      transition: opacity .4s, visibility .4s;
+    }
+  
+    &.modal-is-open .cover-layer {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .cd-schedule {
+      width: 90%;
+      max-width: 1400px;
+      margin: 2em auto;
+  
+      &::after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+  
+      &::before {
+        content: 'desktop';
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .cd-schedule .timeline {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      padding-top: 50px;
+  
+      li {
+        position: relative;
+        height: 50px;
+  
+        &::after {
+          /* this is used to create the table horizontal lines */
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: #EAEAEA;
+        }
+  
+        &:last-of-type::after, span {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 1000px) {
+    .cd-schedule .timeline li {
+      &::after {
+        width: calc(100% - 60px);
+        left: 60px;
+      }
+  
+      span {
+        display: inline-block;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+  
+      &:nth-of-type(2n) span {
+        display: none;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 550px) {
+    .cd-schedule .events .single-event {
+      width: 40%;
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .cd-schedule .events {
+      float: left;
+      width: 100%;
+  
+      .events-group {
+        width: 14%;
+        float: left;
+        border: 1px solid #EAEAEA;
+  
+        /* reset style */
+        margin-bottom: 0;
+  
+        &:not(:first-of-type) {
+          border-left-width: 0;
+        }
+      }
+  
+      .top-info {
+        /* vertically center its content */
+        display: table;
+        height: 50px;
+        border-bottom: 1px solid #EAEAEA;
+  
+        /* reset style */
+        padding: 0;
+  
+        > span {
+          /* vertically center inside its parent */
+          display: table-cell;
+          vertical-align: middle;
+          padding: 0 .5em;
+          text-align: center;
+  
+          /* reset style */
+          font-weight: normal;
+          margin-bottom: 0;
+        }
+      }
+  
+      .events-group > ul {
+        height: 950px;
+  
+        /* reset style */
+        display: block;
+        overflow: visible;
+        padding: 0;
+  
+        &::after {
+          clear: both;
+          content: "";
+          display: block;
+  
+          /* reset style */
+          display: none;
+        }
+      }
+  
+      .single-event {
+        position: absolute;
+        z-index: 3;
+  
+        /* top position and height will be set using js */
+        width: calc(100% + 2px);
+        left: -1px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+  
+        /* reset style */
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+        height: auto;
+        max-width: none;
+        margin-right: 0;
+  
+        a {
+          padding: 1.2em;
+        }
+  
+        &:last-of-type {
+          /* reset style */
+          margin-right: 0;
+        }
+  
+        &.selected-event {
+          /* the .selected-event class is added when an user select the event */
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 1000px) {
+    .cd-schedule .events {
+      /* 60px is the .timeline element width */
+      width: calc(100% - 60px);
+      margin-left: 60px;
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .cd-schedule .event-name {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .cd-schedule .event-modal {
+      /* reset style */
+      right: auto;
+      width: auto;
+      height: auto;
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+      will-change: transform, width, height;
+      -webkit-transition: height .4s, width .4s, visibility .4s, -webkit-transform .4s;
+      transition: height .4s, width .4s, visibility .4s, -webkit-transform .4s;
+      transition: height .4s, width .4s, transform .4s, visibility .4s;
+      transition: height .4s, width .4s, transform .4s, visibility .4s, -webkit-transform .4s;
+      -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+      transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  
+      .header {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 100%;
+  
+        .content {
+          /* reset style */
+          display: block;
+          padding: .8em;
+        }
+      }
+  
+      .event-info > div {
+        padding: 2em 3em 2em 2em;
+      }
+  
+      .body {
+        height: 100%;
+        width: auto;
+      }
+  
+      .header-bg, .body-bg {
+        /* Force Hardware acceleration */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+  
+      .header-bg {
+        -webkit-transition: -webkit-transform .4s;
+        transition: -webkit-transform .4s;
+        transition: transform .4s;
+        transition: transform .4s, -webkit-transform .4s;
+        -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+        transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+      }
+  
+      .body-bg {
+        opacity: 0;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+      }
+  
+      .event-date {
+        display: block;
+      }
+  
+      .close, .event-info {
+        opacity: 0;
+      }
+  
+      .close {
+        width: 40px;
+        height: 40px;
+        background: transparent;
+  
+        &::after, &::before {
+          background: #222222;
+          height: 16px;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 1000px) {
+    .cd-schedule .event-modal .header .content {
+      padding: 1.2em;
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .cd-schedule {
+      &.animation-completed .event-modal .close, &.content-loaded.animation-completed .event-modal .event-info {
+      /* 	the .animation-completed class is added when the modal animation is completed
+              the .content-loaded class is added when the modal content has been loaded (using ajax) */
+        opacity: 1;
+        -webkit-transition: opacity .2s;
+        transition: opacity .2s;
+      }
+  
+      &.modal-is-open .body-bg {
+        opacity: 1;
+        -webkit-transition: -webkit-transform .4s;
+        transition: -webkit-transform .4s;
+        transition: transform .4s;
+        transition: transform .4s, -webkit-transform .4s;
+        -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+        transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+      }
+    }
+  }
+  
+  
+    
