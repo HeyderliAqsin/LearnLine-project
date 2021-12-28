@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+.dark{
+    background: #151A27 !important;
+}
+
+#header-form{
+    .welcome{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        
+        h1{
+            text-align: center;
+            color: #fff;
+           
+        }
+    }
+    .form{
+        .form-head{
+            margin-top: 40px;
+            button{
+                width: 100%;
+                color: #fff;
+                font-size: 25px;
+                margin: 0px auto 10px auto !important;
+
+                font-weight: 600;
+            }
+        }
+        .form-body{
+            .logForm{
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+                .login-form{
+                    display: none;
+                     label{
+                         display: block !important;
+                         color: #fff;
+                     }
+                     input{
+                         margin-bottom: 20px;
+                         width: 300px;
+                         &::placeholder{
+
+                         }
+                         &:focus{
+                                                 
+                             &::placeholder{
+                                 color: red;
+                                 position: absolute;
+                                 top: -8%;
+                                 font-size: 10px;
+                                 transition: 1s ease-in-out;
+
+                             }
+                         }
+                     }
+                 }
+             
+            }
+           .logo{
+               display: flex;
+               justify-content: center;
+               img{
+                   width: 400px;
+                   height: 350px;
+                   object-fit: cover;
+               }
+           }
+           
+        }
+    }
+}
+
+body::-webkit-scrollbar{
+    width: 6px;
+    background-color: #151A27;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #31D2F2;
+}
+
+@media (max-width:992px){
+    #header-form{
+        .form{
+          .form-body{
+              .logo{
+                
+              }
+          }
+        }
+    }
+}

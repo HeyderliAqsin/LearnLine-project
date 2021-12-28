@@ -15,7 +15,7 @@
   background-color: #21283B;
   width: 100%;
   height: 60px;
-  z-index: 5;
+  z-index: 90;
 }
 #header .top-head .searches form {
   width: 100%;
@@ -2292,6 +2292,10 @@ Main Components
   }
 }
 @media screen and (max-width: 768px) {
+  #header .top-head .searches {
+    display: none;
+  }
+
   #Videos .Post .Video iframe, #Videos .Post2 .Video iframe {
     width: 420px;
     height: 300px;
@@ -2304,8 +2308,8 @@ Main Components
 }
 @media screen and (max-width: 592px) {
   #Main .Post .Video iframe, #Main .Post2 .Video iframe, #Main .Post3 .Video iframe {
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
   }
 }
 #CoursesDetail .mains-full {
@@ -2832,9 +2836,10 @@ Main Components
 }
 #checkDiplom .inp {
   position: absolute;
+  z-index: 10;
   left: 15%;
   width: 70%;
-  bottom: 38%;
+  bottom: -10%;
   cursor: pointer;
 }
 #checkDiplom .inp form {
@@ -2852,4 +2857,8 @@ Main Components
 #checkDiplom .cert-photo {
   padding: 40px 0;
   text-align: center;
+}
+
+body {
+  overflow-y: hidden;
 }/*# sourceMappingURL=style.css.map */

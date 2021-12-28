@@ -1,0 +1,85 @@
+.dark {
+  background-color: #151A27;
+}
+
+::-webkit-scrollbar{
+    background-color:#0d6297;
+    width:6px;
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color:#151A27;
+    -webkit-box-shadow: 0 10px 20px #0d6297, 0 6px 6px #0d6297;
+    box-shadow: 0 10px 20px #0d6297, 0 6px 6px #0d6297;  
+}
+
+.editor .editor-name {
+  margin-bottom: 40px !important;
+  margin-top: 30px !important;
+}
+
+.editor .editor-name h1 {
+  color: #fff;
+}
+
+.editor .editor-name .code {
+  font-size: 40px;
+  color: #0d6297;
+}
+
+.editor .editor-write {
+  text-align: center;
+}
+
+.editor .editor-write .code-edit {
+  background-color: #fff;
+  border: 2px solid #0d6297;
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  -webkit-box-shadow: 0 10px 20px #0d6297, 0 6px 6px #0d6297;
+          box-shadow: 0 10px 20px #0d6297, 0 6px 6px #0d6297;
+}
+
+.editor .editor-write #html-code {
+  color: #DD4B25;
+}
+
+.editor .editor-write #css-code {
+  color: #254BDD;
+}
+
+.editor .editor-write #js-code {
+  color: #EFD81C;
+}
+
+.editor .editor-write .html {
+  color: #DD4B25;
+}
+
+.editor .editor-write .head-edit {
+  font-size: 25px;
+}
+
+.editor .editor-write .js {
+  color: #EFD81C;
+}
+
+.editor .editor-write .css {
+  color: #254BDD;
+}
+
+.editor .editor-write .output-sec {
+  margin-top: 50px;
+}
+
+.editor .editor-write #output {
+  background-color: #fff;
+  width: 100%;
+  height: 300px;
+}
+
+.editor .editor-write .out-text {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

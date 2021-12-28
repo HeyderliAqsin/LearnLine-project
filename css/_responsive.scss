@@ -71,7 +71,13 @@
     }
     }
 @media screen and (max-width:768px){
-  
+    #header{
+        .top-head{
+           .searches{
+               display: none;
+           }
+        }
+    }
     #Videos{
         .Post,.Post2{
            .Video{
@@ -101,8 +107,8 @@
             .Post,.Post2,.Post3{
                 .Video{
                     iframe{
-                        width: 500px;
-                        height: 400px;
+                        width: 400px;
+                        height: 300px;
                     }
                    }
             }

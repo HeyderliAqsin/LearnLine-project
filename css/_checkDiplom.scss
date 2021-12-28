@@ -31,9 +31,10 @@
     }
     .inp{
         position: absolute;
+        z-index: 10;
         left: 15%;
         width: 70%;
-        bottom:38%;
+        bottom:-10%;
         cursor: pointer;
         form{
             position: relative;

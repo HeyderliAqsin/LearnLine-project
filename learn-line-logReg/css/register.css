@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dark {
+  background: #151A27 !important;
+}
+
+#header-form .welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+#header-form .welcome h1 {
+  text-align: center;
+  color: #fff;
+}
+
+#header-form .form .form-head {
+  margin-top: 40px;
+}
+
+#header-form .form .form-head button {
+  width: 100%;
+  color: #fff;
+  font-size: 25px;
+  margin: 0px auto 10px auto !important;
+  font-weight: 600;
+}
+
+#header-form .form .form-body .logForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+
+#header-form .form .form-body .logForm .login-form {
+  display: none;
+}
+
+#header-form .form .form-body .logForm .login-form label {
+  display: block !important;
+  color: #fff;
+}
+
+#header-form .form .form-body .logForm .login-form input {
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+#header-form .form .form-body .logForm .login-form input:focus::-webkit-input-placeholder {
+  color: red;
+  position: absolute;
+  top: -8%;
+  font-size: 10px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+#header-form .form .form-body .logForm .login-form input:focus:-ms-input-placeholder {
+  color: red;
+  position: absolute;
+  top: -8%;
+  font-size: 10px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+#header-form .form .form-body .logForm .login-form input:focus::-ms-input-placeholder {
+  color: red;
+  position: absolute;
+  top: -8%;
+  font-size: 10px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+#header-form .form .form-body .logForm .login-form input:focus::placeholder {
+  color: red;
+  position: absolute;
+  top: -8%;
+  font-size: 10px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+#header-form .form .form-body .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#header-form .form .form-body .logo img {
+  width: 400px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #151A27;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #31D2F2;
+}
+/*# sourceMappingURL=register.css.map */
